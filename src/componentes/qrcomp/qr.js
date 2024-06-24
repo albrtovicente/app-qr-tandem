@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./QRComponent.css"
 
-function QRComponent({ onColorChange, onSizeChange }) {
+function Qrcomponent({ onColorChange, onSizeChange }) {
     const [selectedColor, setSelectedColor] = useState('negro');
     const [selectedSize, setSelectedSize] = useState('pequeño');
 
@@ -96,5 +96,4 @@ function QRComponent({ onColorChange, onSizeChange }) {
         </div>
     );
 }
-
-export default QRComponent;
+export default Qrcomponent;

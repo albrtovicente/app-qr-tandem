@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import BasicPopover from "../componentes/popover/popover"
 // import {QRCodeCanvas, QRCodeSVG} from 'qrcode.react'
-import QRComponent from "../componentes/qrcomp/QrComponent"
+import Qrcomponent from "../componentes/qrcomp/qr"
 import QRCode from "qrcode.react"
 import download from "downloadjs"
 import { toPng, toJpeg, toSvg } from "html-to-image"
@@ -75,7 +75,7 @@ function CrearQr() {
               </div>
               <div className="personalizarqr">
                 <p className="grupo2">Personalizar QR</p>
-                <QRComponent
+                <Qrcomponent
                   onColorChange={handleColorChange}
                   onSizeChange={handleSizeChange}
                   colorOptions={colorOptions}
