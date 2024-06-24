@@ -104,10 +104,6 @@ const Header =()=>{
 
             </li>
             <li>
-            <Link to="/noticias" style={{color: `white`, textDecoration: `none`, padding: `20%`}}>Noticias</Link>
-
-            </li>
-            <li>
             <Link to="/contacto" style={{color: `white`, textDecoration: `none`, padding: `20%`}}>Contacto</Link>          
 
             </li>

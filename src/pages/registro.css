@@ -21,6 +21,27 @@
   padding: 20px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
+.columnaRegistro{
+  display: flex;
+}
+.tituloRegistro{
+  margin: 5px;
+}
+.button_active{
+  display: block;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color: #4e517a; 
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 90px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
 .inputContainer {
   position: relative;
   height: 45px;
@@ -33,7 +54,7 @@
   left: 0px;
   height: 100%;
   width: 100%;
-  border: 1px solid #DADCE0;
+  border: 1px solid #0d0dd4;
   border-radius: 7px;
   font-size: 16px;
   padding: 0 20px;
@@ -44,6 +65,7 @@
 
 
 ::placeholder {
+  /* color: ; */
   color: transparent;
 }
 
@@ -53,7 +75,7 @@
   left: 15px;
   padding: 0 4px;
   background-color: white;
-  color: #DADCE0;
+  color: #1f201f;
   font-size: 16px;
   transition: 0.5s;
   z-index: 0;

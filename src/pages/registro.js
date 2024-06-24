@@ -15,8 +15,20 @@ const Registro = () => {
         <div className="imgFondo">
 
 <div class="signupFrm">
+     
     <form action="" class="form">
-      <h1 class="title">Registro</h1>
+      <div className="columnaRegistro">
+         <div className="tituloRegistro">
+           <h1 class="title">Registro</h1>
+         </div>
+         <div className="botonRegistro">
+          <Link to="/CrearQr">
+            <button className="button_active">Atrás</button>
+          </Link> 
+          {/* <input type="button" class="button_active" onclick="location.href='..\acceso.js';" value="Atrás"/> */}
+           {/* <button><a href="../acceso">Atrás</a></button> */}
+         </div>
+      </div>
 
       <div class="inputContainer">
         <input type="text" class="input" placeholder=""/>
