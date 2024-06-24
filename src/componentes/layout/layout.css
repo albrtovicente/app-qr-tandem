@@ -1,0 +1,33 @@
+
+.flexbutton{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+
+}
+.imagenFondo{
+  background-image: url("../images/ara2.jpg");
+  background-size: cover;
+  height:65vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 90%;
+}
+@media (max-width: 400px) {
+  .imagenFondo{
+    height:55vh;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
