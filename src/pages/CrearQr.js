@@ -10,10 +10,8 @@ import QRComponent from "../componentes/qrcomp/QrComponent"
 import QRCode from "qrcode.react"
 import download from "downloadjs"
 import { toPng, toJpeg, toSvg } from "html-to-image"
-import Mapa from "../componentes/mapa/Mapa"
 
 import './CrearQr.css'
-import { LatLng } from "leaflet"
 
 function CrearQr() {
     const [inputValue, setInputValue] = useState('');
