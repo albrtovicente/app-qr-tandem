@@ -15,7 +15,7 @@ const IndexPage = () => {
       <div className="imagenFondo">
         <div className="flexbutton">
 
-          <Button><Link to="/acceso" style={{color: `white`, textDecoration: `none`}}>Acceso Usuario</Link></Button>
+          <Button><Link to="/login" style={{color: `white`, textDecoration: `none`}}>Acceso Usuario</Link></Button>
 
           <Button><Link to="/infoInstitucional" style={{color: `white`, textDecoration: `none`}}>Información</Link></Button>
           
