@@ -1,73 +1,33 @@
 
-import * as React from "react"
-import Layout from "../componentes/layout/layout"
-import './registro.css'
-import Button from "../componentes/button/button"
-import { Link } from "gatsby"
 
+import './registro2.css'
+import React, { useState } from 'react';
+const ShowPass = () => {
+    let password = document.getElementById('password');
+    let viewPassword = document.getElementById('viewPassword');
+    let click = false;
+        viewPassword.addEventListener('click', (e)=>{
+    if(!click){
+        password.type = 'text'
+        click = true
+    }else if(click){
+        password.type = 'password'
+        click = false
+    }
+    })
 
-
-
-
-const Registro2 = () => {
-  
     return (
-      <Layout>
-        <div className="imgFondo">
-
-        <div class="signupFrm">
-     
-            <form action="" class="form">
-            <div className="columnaRegistro">
-                <div className="tituloRegistro">
-                <h1 class="title">Registro</h1>
+               
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                    <label for="password">Ingrese su contraseña</label>
+                        <input type="password" id="password"/>
+                    </div>
+                    <div class="col s12">
+                    <a id="viewPassword">Mostrar contraseña</a>
+                    </div>
                 </div>
-                <div className="botonRegistro">
-                <Link to="/CrearQr">
-                    <button className="button_active">Atrás</button>
-                </Link> 
-                </div>
-            </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder=""/>
-        <label for="" class="label">Usuario</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder=""/>
-        <label for="" class="label">Delegación</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder=""/>
-        <label for="" class="label">Email</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder=""/>
-        <label for="" class="label">Confirmar email</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder=""/>
-        <label for="" class="label">Contraseña</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder=""/>
-        <label for="" class="label">Confirmar Contraseña</label>
-      </div>
-
-      <input type="submit" class="submitBtn" value="Registrar"/>
-    </form>
-  </div>
-  </div>
-          
-  
-      </Layout>
-      
-    )
-  }
-  
-  export default Registro2
+        
+    );
+};
+export default ShowPass;

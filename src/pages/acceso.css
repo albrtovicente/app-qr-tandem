@@ -31,7 +31,7 @@
 
 
 .icono {
-  background-image: url('../componentes/images/acceso.png');
+  background-image: url('../componentes/images/correo.png');
   background-repeat: no-repeat;
   background-position: 4px center;
   background-size: 20px;
@@ -74,7 +74,11 @@
 .icono2 input:focus {
   outline: none;
 }
-
+/* Boton ver contraseña */
+#viewPassword{
+  cursor:pointer;
+}
+/***********/
 .flexButton{
   display: flex;
   margin-left: 35%;

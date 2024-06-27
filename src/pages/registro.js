@@ -12,25 +12,26 @@ const Registro = () => {
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [departamento, setDepartamento]= useState('');
+    const [delegacion, setDelegacion]= useState('');
     const [message, setMessage] = useState('');
 
     const hadleNombre=(e) => setNombre(e.target.value);
     const hadleEmail=(e) => setEmail(e.target.value);
     const hadlePassword=(e) => setPassword(e.target.value);
-    const hadleDepartamento=(e) => setDepartamento(e.target.value);
+    const hadleDelegacion=(e) => setDelegacion(e.target.value);
 
 
     const handleRegistro = async () => {
+      
         try {
-            const response = await fetch('http://localhost/api-qr-tandem/v1/register-user.php', {
+            const response = await fetch('http://localhost/gatsby/v1/register-user.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     "nombre": nombre,
-                    "departamento": departamento,
+                    "delegacion": delegacion,
                     "email": email,
                    "password": password
                 })
@@ -49,7 +50,7 @@ const Registro = () => {
       <div className="imgFondo">
 
       <div class="signupFrm">
-        <form action="" class="form">
+        <div action="" class="form">
               <div className="columnaRegistro">
                 <div className="tituloRegistro">
                   <h1 class="title">Registro</h1>
@@ -78,11 +79,11 @@ const Registro = () => {
                 className="input"
                 type="text"
                 placeholder=""
-                id='departamento'
-                value={departamento}
-                onChange={hadleDepartamento}
+                id='delegacion'
+                value={delegacion}
+                onChange={hadleDelegacion}
             />
-            <label htmlFor='departamento' class="label">Delegación</label>
+            <label htmlFor='delegacion' class="label">Delegación</label>
           </div>
 
           <div class="inputContainer">
@@ -103,7 +104,7 @@ const Registro = () => {
           </div> */}
 
           <div class="inputContainer">
-          <input
+            <input
                 className="input"
                 type="text"
                 placeholder=""
@@ -111,7 +112,7 @@ const Registro = () => {
                 value={password}
                 onChange={hadlePassword}
             />
-            <label htmlFor='password' className="label">Contraseña:</label>
+            <label htmlFor='password' className="label">Contraseña</label>
           </div>
 
           {/* <div class="inputContainer">
@@ -119,12 +120,14 @@ const Registro = () => {
             <label for="" class="label">Confirmar Contraseña</label>
           </div> */}
             {/* <button onClick={handleRegistro} className="submitBtn">Registro</button> */}
-
+            <input onClick={handleRegistro} type="submit" class="submitBtn" value="Registrar"/>
+            {message && <p>{message}</p>}
             
-        </form>
-        <input onClick={handleRegistro} type="submit" class="submitBtn" value="Registrar"/>
+        </div>
+            {/* <input onClick={handleRegistro} type="submit" class="submitBtn" value="Registrar"/>
+            {message && <p>{message}</p>} */}
             {/* <button onClick={handleRegistro} className="submitBtn">Registro</button> */}
-            {message && <p>{message}</p>} 
+             
         </div>
         </div>
       </Layout>
