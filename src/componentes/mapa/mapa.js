@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
-const Mapa = ({ setLatLng }) => {
+const Mapad = ({ setLatLng }) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -63,4 +63,4 @@ const Mapa = ({ setLatLng }) => {
   );
 };
 
-export default Mapa;
+export default Mapad;

@@ -4,13 +4,14 @@ import TabTandem from "../componentes/tab/tab"
 import {  useRef } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import Opciones2 from "../componentes/opc/opc2"
 import BasicPopover from "../componentes/popover/popover"
 // import {QRCodeCanvas, QRCodeSVG} from 'qrcode.react'
 import Qrcomponent from "../componentes/qrcomp/qr"
 import QRCode from "qrcode.react"
 import download from "downloadjs"
 import { toPng, toJpeg, toSvg } from "html-to-image"
-
+import CenteredTabs from "../componentes/centeredTabs/centeredTabs"
 import './CrearQr.css'
 
 function CrearQr() {
@@ -68,7 +69,13 @@ function CrearQr() {
                 <p className="grupo1">Contenido del QR</p>
                   <br />
                   <div className="tabStyle">
-                    <TabTandem></TabTandem>
+                  <CenteredTabs 
+                    inputValue={inputValue} 
+                    setInputValue={setInputValue} 
+                    latLng={latLng} 
+                    setLatLng={setLatLng} 
+                    setInputType={setInputType}
+                  /> 
                   </div>
                   {/* <p>Introduce el contenido deseado</p> */}
                   
@@ -85,23 +92,34 @@ function CrearQr() {
             <div className="qr-contenido">
               <p className="grupo3">Tu QR</p>
               <div ref={qrRef}>
-                <QRCode value={inputValue} size={qrSize} fgColor={qrColor} onChange={handleInputChange}/>
+              <QRCode
+                value={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue}
+                size={qrSize}
+                fgColor={qrColor}
+              />
               </div>
             </div>
             <br />
             {/* <TandemButton enlace="#">Generar QR</TandemButton> */}
             <div className="qrcreado">
-              {/* <p className="grupo4">QR creado</p>
+               {/* <p className="grupo4">QR creado</p>
               <p>{inputValue}</p>
               <p>{qrColor}</p>
               <p>{qrSize}</p> */}
-            
+            <Opciones2></Opciones2>
             
             <br />
             <p className="grupo5">Descargar QR</p>
             <button onClick={handleDownload} className="button22" role="button">Png</button>
             <button onClick={handleDownload2} className="button22" role="button">Jpeg</button>
             <button onClick={handleDownload3} className="button22" role="button">Svg</button>
+            </div>
+            <div className="qrcreado">
+              <div className="grupo5">
+                 <p>Guardar Qr</p>
+                 <button onClick={handleDownload} className="button22" role="button">Png</button>
+              </div>
+              
             </div>
             <div className="imgCrear">
               <Link to="/CrearQr">

@@ -45,7 +45,7 @@ function Opciones2(props) {
           color="primary"
           outline
           onClick={() => setRSelected("Texto")}
-          active={rSelected === 2}
+          active={rSelected === 1}
         >
           Texto
         </Button>
@@ -54,7 +54,7 @@ function Opciones2(props) {
           color="primary"
           outline
           onClick={() => setRSelected("Lugar")}
-          active={rSelected === 3}
+          active={rSelected === 1}
         >
           Lugar
         </Button>

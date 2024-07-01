@@ -84,7 +84,7 @@ const Login = () => {
     const [message, setMessage] = useState('');
     const handleLogin = async () => {
         try {
-            const peticion = await fetch('http://localhost/api-qr-tandem/v1/login.php', {
+            const peticion = await fetch('http://localhost/api-qr-tandem/v1/login-user.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -96,7 +96,8 @@ const Login = () => {
             if (respuesta.message === 'Login exitoso') {
                 // Aquí podrías guardar el usuario en el estado global o en localStorage
                 console.log(respuesta.user);
-                setMessage('Login exitoso para el usuario con id:'+ respuesta.user.id);
+                window.location.href = '/CrearQr';
+                // setMessage('Login exitoso para el usuario con id:'+ respuesta.user.id);
             } else {
                 setMessage('Credenciales incorrectas');
             }
@@ -133,15 +134,15 @@ const Login = () => {
                                  value={password}
                                  onChange={(e) => setPassword(e.target.value)}
                              />
-                         </div>
+                        </div>
                      </li>
                  </ul>
                </form>
             
             
-               <button onClick={handleLogin}>Entrar</button>
+               <button onClick={handleLogin} href="/CrearQr">Entrar</button>
                <p>{message}</p>
-               <a href="#" role='button' >¿Olvidaste tu contraseña?</a>
+               <a href="/change-password" role='button' >¿Olvidaste tu contraseña?</a>
                <br></br>
                <a href="/registro" role='button' >Registrarse</a>
              </div>
