@@ -28,6 +28,8 @@ const Login = () => {
                 localStorage.setItem('tandem_id', respuesta.user.id);
                 localStorage.setItem('tandem_delegacion', respuesta.user.delegacion);
                 localStorage.setItem('tandem_role', respuesta.user.role);
+                localStorage.setItem('tandem_img_user', respuesta.user.image_url);
+                localStorage.setItem('tandem_users', respuesta.user);
                 console.log(respuesta.user);
                 window.location.href = '/CrearQr';
                 // setMessage('Login exitoso para el usuario con id:'+ respuesta.user.id);

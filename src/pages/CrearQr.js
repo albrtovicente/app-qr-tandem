@@ -11,12 +11,15 @@ import CenteredTabs from "../componentes/tab/tab";
 // import Modall from "../components/modal";
 import BasicPopover from "../componentes/popover/popover"
 import Pipiver from "../componentes/popover2/pipiver";
-import TablaUsuarios from "./tablausuario";
+import ChangeRole from "./change_role";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import './CrearQr.css';
+import UploadUserImage from "../componentes/upload-user-images/UploadUserImage";
+import ChangeAvatar from "../componentes/change-avatar/change-avatar";
+import CerrarSesion from "../componentes/cerrarSesion/cerrar_sesion";
 
 
 // import Mapa from "../componentes/mapa/mapa";
@@ -107,26 +110,36 @@ function Crearqr() {
       <div className="containerQr" >
       <div className="qr-generador" style={containerStyle}>
         <div className="columnaCrear">
+          
         <div className="tituloCrear">
           <h1>GENERADOR DE QR</h1>
+          <ChangeRole></ChangeRole>
         </div>
         <div className="linkCrear">
-          {/* <Link to="/pipiver">
+            {/* <Link to="/pipiver">
                 <StaticImage className="logoheader"
                 src="..\componentes\images\acceso.png"
                 loading="eager"
                 width={80}
                 height={80}
-          /></Link> */}
-                    <Pipiver></Pipiver>
+              /></Link> */}
+            <Pipiver>
+              <StaticImage className="logoheader"
+                src="..\componentes\images\acceso.png"
+                loading="eager"
+                width={80}
+                height={80}
+              />
+            </Pipiver> 
 
         </div>
         </div>
         
-        
+        {/* <UploadUserImage></UploadUserImage>
+        <ChangeAvatar></ChangeAvatar> */}
           <BasicPopover></BasicPopover>
           
-          <TablaUsuarios></TablaUsuarios>
+          
           
           <div className="contenidoqr">
           <p className="grupo1">Contenido del QR</p>
@@ -141,7 +154,18 @@ function Crearqr() {
           />
           </div> 
           </div>
-          <div className="qr-contenido">
+          
+
+        <div className="personalizarqr">
+               <p className="grupo2">Personalizar QR</p>
+          {/* <h3><FaEdit style={{ color: '#43381b' }}/>Personaliza tu QR:</h3> */}
+          <Qrcomponent
+            onColorChange={handleColorChange}
+            onSizeChange={handleSizeChange}
+            colorOptions={colorOptions}
+          />
+        </div>
+        <div className="qr-contenido">
             <p className="grupo3">Tu QR</p>
             <div ref={qrRef}>
             <div ref={qrRef}>
@@ -152,16 +176,6 @@ function Crearqr() {
             />
             </div>
           </div>
-        </div>
-
-        <div className="personalizarqr">
-               <p className="grupo2">Personalizar QR</p>
-          {/* <h3><FaEdit style={{ color: '#43381b' }}/>Personaliza tu QR:</h3> */}
-          <Qrcomponent
-            onColorChange={handleColorChange}
-            onSizeChange={handleSizeChange}
-            colorOptions={colorOptions}
-          />
         </div>
         <div className="modales">
           {/* <Modall></Modall> */}

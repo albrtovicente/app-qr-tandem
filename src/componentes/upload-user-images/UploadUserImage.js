@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 const UploadUserImage = ({idUser}) => {
     const [image, setImage] = useState(null);
     const [message, setMessage] = useState('');
@@ -46,4 +47,4 @@ const UploadUserImage = ({idUser}) => {
         </form>
     );
 };
-export default UploadUserImage;
+export default UploadUserImage

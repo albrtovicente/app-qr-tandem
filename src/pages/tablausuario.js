@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Layout from "../componentes/layout/layout";
 
 function TablaUsuarios({ url }) {
 const [users,setUsers]=useState([]);
@@ -7,7 +8,7 @@ const {message,setMessage}=useState('')
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await fetch(url, {
+                const response = await fetch('http://localhost/api-qr-tandem/v1/list-users.php', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -28,7 +29,7 @@ const {message,setMessage}=useState('')
     }, [url]);
     return (
         <>
-            <p>Esta será la Tabla</p>
+          <div>
             <table>
                 <thead>
                 <tr>
@@ -53,7 +54,7 @@ const {message,setMessage}=useState('')
                     </tr>
                     ))}
             </table>
-
+            </div>
         </>
     );
 }
