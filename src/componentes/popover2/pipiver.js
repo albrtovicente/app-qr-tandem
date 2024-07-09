@@ -3,6 +3,7 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from "gatsby"
+import "../popover2/pipiver.css"
 import CerrarSesion from '../cerrarSesion/cerrar_sesion';
 import ChangeRole from '../../pages/change_role';
 import { StaticImage } from "gatsby-plugin-image";
@@ -113,9 +114,15 @@ export default function Pipiver (){
      return(
          <>
          <div>
-             <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#4e517a`}} onClick={handleClick}>
-             Popover
-             </Button>
+            <Button aria-describedby={id} variant="contained" className='button_active' onClick={handleClick}>
+                <StaticImage className="logoAvatar"
+                    src="../images/acceso.png"
+                    loading="eager"
+                    width={80}
+                    height={80}
+                />
+            </Button>
+             
              <Popover
                  id={id}
                  open={open}

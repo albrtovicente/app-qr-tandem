@@ -107,10 +107,7 @@ const Header =()=>{
             <Link to="/contacto" style={{color: `white`, textDecoration: `none`, padding: `20%`}}>Contacto</Link>          
 
             </li>
-            <li>
-            <Link to="/visita" style={{color: `white`, textDecoration: `none`, padding: `20%`}}>Visita</Link>
-
-            </li>
+            
         </ul>
     </nav>
 </header>

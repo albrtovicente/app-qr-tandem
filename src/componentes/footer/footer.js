@@ -30,11 +30,7 @@ const Footer =()=>{
                     <li>
                     <Link to="/privacidad" style={{color: `white`, textDecoration: `none`, padding: `20%`}}>Política de privacidad</Link>   
 
-                    </li>
-                    <li>
-                    <Link to="/visita" style={{color: `white`, textDecoration: `none`}}>Visita</Link>
-
-                    </li>
+                    </li>                    
                 </ul>
             </nav>
             <br></br>

@@ -113,7 +113,6 @@ function Crearqr() {
           
         <div className="tituloCrear">
           <h1>GENERADOR DE QR</h1>
-          <ChangeRole></ChangeRole>
         </div>
         <div className="linkCrear">
             {/* <Link to="/pipiver">
