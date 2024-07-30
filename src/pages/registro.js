@@ -11,28 +11,29 @@ import { Link } from "gatsby"
 const Registro = () => {
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [delegacion, setDelegacion]= useState('');
+    const [delegacion, setDelegacion] = useState('');
+    const [password, setPassword]= useState('');
     const [message, setMessage] = useState('');
 
     const hadleNombre=(e) => setNombre(e.target.value);
-    const hadleEmail=(e) => setEmail(e.target.value);
-    const hadlePassword=(e) => setPassword(e.target.value);
     const hadleDelegacion=(e) => setDelegacion(e.target.value);
+    const hadleEmail=(e) => setEmail(e.target.value);
+
+    const hadlePassword=(e) => setPassword(e.target.value);
 
 
     const handleRegistro = async () => {
       
         try {
-            const response = await fetch('http://localhost/gatsby/v1/register-user.php', {
+            const response = await fetch('http://localhost/api-qr-tandem/v1/register.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     "nombre": nombre,
-                    "delegacion": delegacion,
                     "email": email,
+                    "delegacion": delegacion,
                    "password": password
                 })
             });
@@ -53,7 +54,7 @@ const Registro = () => {
         <div action="" class="form">
               <div className="columnaRegistro">
                 <div className="tituloRegistro">
-                  <h1 class="title">Registro</h1>
+                  <h1 class="title">Registrar</h1>
                 </div>
                 <div className="botonRegistro">
                 <Link to="/login">
@@ -71,19 +72,7 @@ const Registro = () => {
                 value={nombre}
                 onChange={hadleNombre}
             />
-            <label htmlFor='nombre' class="label">Usuario</label>
-          </div>
-
-          <div class="inputContainer">
-          <input
-                className="input"
-                type="text"
-                placeholder=""
-                id='delegacion'
-                value={delegacion}
-                onChange={hadleDelegacion}
-            />
-            <label htmlFor='delegacion' class="label">Delegación</label>
+            <label htmlFor='nombre' class="label">Nombre</label>
           </div>
 
           <div class="inputContainer">
@@ -96,6 +85,18 @@ const Registro = () => {
                 onChange={hadleEmail}
             />
             <label htmlFor='email' class="label">Email</label>
+          </div>
+
+          <div class="inputContainer">
+          <input
+                className="input"
+                type="text"
+                placeholder=""
+                id='delegacion'
+                value={delegacion}
+                onChange={hadleDelegacion}
+            />
+            <label htmlFor='delegacion' class="label">Delegacion</label>
           </div>
 
           {/* <div class="inputContainer">

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'gatsby';
 
 const CerrarSesion = () => {
   const handleCerrarSesion =()=>{
@@ -13,7 +13,7 @@ const CerrarSesion = () => {
 
   return (
     <>
-      <button onClick={handleCerrarSesion}>Cerrar sesión</button>
+      <Link onClick={handleCerrarSesion} to='/index' style={{textDecoration:'none', marginBottom:'auto', color:'red'}}>Cerrar sesión</Link>
     </>
   )
 }

@@ -18,7 +18,7 @@ const Titulo =()=>{
                     <p>    Nos complace recibirles en este espacio dedicado a la preservación y promoción de nuestro valioso patrimonio cultural. Aquí, podrán generar Códigos QR personalizados para facilitar el acceso a la información de nuestros monumentos, sitios históricos, y bienes culturales.</p>
                 </div>
                 <div className="imagentitulo" id="imagenacceso">
-                    <Link to="../acceso"> 
+                    <Link to="../login"> 
                     <StaticImage 
                         src="..\images\acceso.png"
                         style={{color: `black`, textDecoration: `none`}}

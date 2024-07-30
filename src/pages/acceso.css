@@ -74,19 +74,62 @@
 .icono2 input:focus {
   outline: none;
 }
+.icono3 {
+  background-image: url('../componentes/images/acceso.png');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 20px;
+  display: flex;
+  /* align-items: center!important;  */
+  width: 200px;
+  padding-left: 28px;
+  height: 40px;
+  border: 1px solid #0971a3;
+  border-radius: 3px;
+}
+.icono3 input {
+  width: 100%;
+  font-size: 0.9em;
+  border: none;
+}
+.icono3 input:focus {
+  outline: none;
+}
+
+.icono4 {
+  background-image: url('../componentes/images/delegacion.png');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 20px;
+  display: flex;
+  /* align-items: center!important;  */
+  width: 300px;
+  padding-left: 28px;
+  height: 40px;
+  border: 1px solid #0971a3;
+  border-radius: 3px;
+}
+.icono4 input {
+  width: 100%;
+  font-size: 0.9em;
+  border: none;
+}
+.icono4 input:focus {
+  outline: none;
+}
 /* Boton ver contraseña */
 #viewPassword{
   cursor:pointer;
 }
 /***********/
-.flexButton{
+/* .flexButton{
   display: flex;
   margin-left: 35%;
     
 }
 .button{
   margin: 30px;
-}
+} */
 #linkRegistrar{
   margin-top: 120px;
   font-size: 20px;
@@ -99,74 +142,3 @@
 #linkRegistrar{
   margin-top: 90px;
 }
-
-/* .buttonCrear {
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  padding-block: 0.5rem;
-  padding-inline: 1.25rem;
-  background-color: rgb(0 107 179);
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #ffff;
-  gap: 10px;
-  font-weight: bold;
-  border: 3px solid #ffffff4d;
-  outline: none;
-  overflow: hidden;
-  font-size: 15px;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease-in-out;
-}
-
-.buttonCrear:hover {
-  transform: scale(1.05);
-  border-color: #fff9;
-}
-
-.buttonCrear:hover .icon {
-  transform: translate(4px);
-}
-
-.buttonCrear:hover::before {
-  animation: shine 1.5s ease-out infinite;
-}
-
-.buttonCrear::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100%;
-  background-image: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0) 70%
-  );
-  top: 0;
-  left: -100px;
-  opacity: 0.6;
-}
-
-@keyframes shine {
-  0% {
-    left: -100px;
-  }
-
-  60% {
-    left: 100%;
-  }
-
-  to {
-    left: 100%;
-  }
-} */
-

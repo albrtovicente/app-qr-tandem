@@ -11,6 +11,7 @@ const Footer =()=>{
         <>
         <div className="containerfooter">
         <div class="footer">
+           <div className="fila1">
             <div class="logo">
                 <div className="imgLogo"><Link to="/" style={{color: `white`, textDecoration: `none`, padding: `20%`}}>
                             <StaticImage className="logoheader"
@@ -33,6 +34,8 @@ const Footer =()=>{
                     </li>                    
                 </ul>
             </nav>
+           </div>
+           <div className="fila2">
             <br></br>
             <nav className="link2">
                 <ol>
@@ -90,6 +93,7 @@ const Footer =()=>{
                     </li>
                 </ol>
             </nav>
+           </div>
         </div>
 
         </div> 

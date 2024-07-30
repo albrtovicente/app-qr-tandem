@@ -42,7 +42,7 @@ const ChangeRole = () => {
                     
                     <li className="mail">
                     
-                        <div class="icono">
+                        <div class="icono" style={{width: `200px`}}>
                         <input
                             type="email"
                             placeholder="Email"
@@ -52,23 +52,22 @@ const ChangeRole = () => {
                         </div>
                     </li>
                     <li className="pass">
-                    <div class="icono2">
+                    <div class="icono3">
                         <input
                             // className="input"
                             type="text"
                             placeholder="cambiar rol"
-                            id='text'
                             value={role}
                             onChange={handleRole}
                         />
-                        <label htmlFor='text' className="label"></label>
+                        {/* <label htmlFor='text' className="label"></label> */}
                     </div>
                     </li>
                 </ul>
             </form>
             
             
-            <button onClick={handleChangeRole}>Cambiar Role</button>
+            <button onClick={handleChangeRole} className='button22'>Cambiar Role</button>
             
             </div>
     );

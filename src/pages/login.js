@@ -75,13 +75,17 @@ const Login = () => {
                </form>
             
             
-               <button onClick={handleLogin} href="/CrearQr">Entrar</button>
+               <button onClick={handleLogin} href="/CrearQr" className='button22' style={{width: `100px`}}>Entrar</button>
                <p>{message}</p>
                <a href="/change-password" role='button' >¿Olvidaste tu contraseña?</a>
                <br></br>
                <a href="/registro" role='button' >Registrarse</a>
              </div>
              </div>
+
+
+
+             
              </Layout>
     );
 };

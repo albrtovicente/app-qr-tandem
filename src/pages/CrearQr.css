@@ -20,6 +20,7 @@ border: 2px solid black;
     margin-left: auto;
     
 }
+
 .tituloCrear{
     margin-left: auto;
 }
@@ -65,13 +66,7 @@ border: 2px solid black;
     font-weight: 900;
     color: #4e517a;
 }
-.qrcreado{
-    background-color: rgb(219, 213, 191);
-    border: 2px solid rgb(0, 0, 0);
-    margin: 20px 80px 20px 80px;
-    padding: 20px;
-    border-radius: 10px;
-}
+
 .grupo4{
     font-size: 24px;
     font-weight: 900;
@@ -84,9 +79,6 @@ border: 2px solid black;
     
 }
 
-.button22{
-
-}
 
 
 
@@ -132,3 +124,19 @@ border: 2px solid black;
     width: 80px;
     margin-left: auto;
 }
+
+.qr-opciones{
+    background-color: rgb(219, 213, 191);
+    border: 2px solid rgb(0, 0, 0);
+    /* margin: 20px 80px 20px 80px;
+    padding: 20px; */
+    border-radius: 10px;
+   
+    align-content: space-between;
+    display: flex;
+}
+.qrcreado, .qrcompartir{
+    margin-left: auto ; 
+    margin-top: 30px;
+}
+

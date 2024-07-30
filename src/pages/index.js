@@ -20,7 +20,7 @@ const IndexPage = () => {
           <Button><Link to="/infoInstitucional" style={{color: `white`, textDecoration: `none`}}>Información</Link></Button>
           
 
-
+         
         </div>
       </div>
 
