@@ -4,14 +4,13 @@ const UpdateUser = ({initialNombre, initialEmail, initialDelegacion}) => {
    
 
     const [nombre, setNombre] = useState(initialNombre);
-    const [email, setemail] = useState(initialEmail);
+    const [email] = useState(initialEmail);
     const [delegacion, setDelegacion] = useState(initialDelegacion);
     
     const [message, setMessage] = useState('');
 
     
     const handleNombre=(e) => setNombre(e.target.value);
-    const handleEmail=(e) => setemail(e.target.value);
     const handleDelegacion=(e) => setDelegacion(e.target.value);
 
 
@@ -40,30 +39,21 @@ const UpdateUser = ({initialNombre, initialEmail, initialDelegacion}) => {
             <form action="/my-handling-form-page" method="post" className="formAcceso" >
                 <ul className="lista">
                     
-                    <li className="mail">
-                    
-                        <div className="icono" style={{width: `200px`}}>
-
-                        <input 
-                            id="input"
-                            type="text"
-                            value={email}
-                            onChange={handleEmail}
-                        />
-                        </div>
-                            
-                            
+                    <li>
+                        <p>
+                            {email}
+                        </p>                            
                     </li>
                     <li className="pass">
-                    <div className="icono3">
-                        <input
-                            type="text"
-                            id='text'
-                            value={nombre}
-                            onChange={handleNombre}
-                        />
-                        
-                    </div>
+                        <div className="icono3">
+                            <input
+                                type="text"
+                                id='text'
+                                value={nombre}
+                                onChange={handleNombre}
+                            />
+                            
+                        </div>
                     </li>
                     <br></br><br></br>
                     <li>

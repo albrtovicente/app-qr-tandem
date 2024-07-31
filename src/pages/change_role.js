@@ -1,75 +1,63 @@
-
 import * as React from "react"
 import { useState } from 'react';
-const ChangeRole = () => {
+
+const ChangeRole = ({initialEmail, initialRole, onUserUpdated}) => {
    
 
-    const [email, setEmail] = useState('');
-    const [role, setRole] = useState('');
-    
+    const [email] = useState(initialEmail);
+    const [role, setRole] = useState(initialRole);
     const [message, setMessage] = useState('');
+    
 
     
     const handleRole=(e) => setRole(e.target.value);
-    
 
 
-    const handleChangeRole = async () => {
+    const handleChangeRole = async (e) => {
+        e.preventDefault();
+
         try {
             const response = await fetch('http://localhost/api-qr-tandem/v1/change-role.php', {
                 method: 'PUT',
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, role })
-            });
-            const data = await response.json();
-            
-            setMessage(data.message);
-            } catch (error) {
-                console.error('Error cambiando rol del usuario', error);
-                setMessage('Error cambiando rol del usuario');
-            }
-        };
-    
-    return (
-       
-            <div >
-            
-            <h3>Cambio de Role</h3>
-            <form action="/my-handling-form-page" method="post" className="formAcceso" >
-                <ul className="lista">
-                    
-                    <li className="mail">
-                    
-                        <div class="icono" style={{width: `200px`}}>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />                
-                        </div>
-                    </li>
-                    <li className="pass">
-                    <div class="icono3">
-                        <input
-                            // className="input"
-                            type="text"
-                            placeholder="cambiar rol"
-                            value={role}
-                            onChange={handleRole}
-                        />
-                        {/* <label htmlFor='text' className="label"></label> */}
-                    </div>
-                    </li>
-                </ul>
-            </form>
-            
-            
-            <button onClick={handleChangeRole} className='button22'>Cambiar Role</button>
-            
-            </div>
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({ email, role })
+         });
+         const data = await response.json();
+         setMessage(data.message);
+
+         } catch (error) {
+             console.error('Error registrando usuario', error);
+             
+            onUserUpdated();
+
+         }
+     };
+ 
+ return (
+     <>
+         <div>
+      <h2>Actualizar Rol de Usuario</h2>
+      <form onSubmit={handleChangeRole}>
+        <div>
+          <p>{email}</p>
+        </div>
+        <div>
+          <label>
+            Role:
+            <select id="roleSelect" value={role} onChange={handleRole} required>
+            <option value="admin">Admin</option>
+            <option value="employee">Employee</option>
+            <option value="guest">Guest</option>
+            </select>
+          </label>
+        </div>
+        <button type="submit">Actualizar Rol</button>
+      </form>
+      {message && <p>{message}</p>} 
+    </div>
+        </>
     );
 };
 export default ChangeRole;

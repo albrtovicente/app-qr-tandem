@@ -8,9 +8,8 @@ import QRCode from 'qrcode.react';
 import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from "downloadjs";
 import CenteredTabs from "../componentes/tab/tab";
-// import Modall from "../components/modal";
-import BasicPopover from "../componentes/popover/popover"
-import Pipiver from "../componentes/popover2/pipiver";
+import PopoverInstr from "../componentes/popovers/popoverInstr";
+import Pipiver from "../componentes/popovers/pipiver";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -19,15 +18,8 @@ import ModalTandem from "../componentes/modal/modal";
 import GuardarQr from "./guardarQr";
 import './CrearQr.css';
 import RoleGuest from "./role_guest";
-import updateUser from "./update_user";
-import UploadUserImage from "../componentes/upload-user-images/UploadUserImage";
-import ChangeAvatar from "../componentes/change-avatar/change-avatar";
-import CerrarSesion from "../componentes/cerrarSesion/cerrar_sesion";
 
 
-// import Mapa from "../componentes/mapa/mapa";
-// import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
-// import SaveDb from "../components/savedb";
 
 
 function Crearqr() {
@@ -155,7 +147,7 @@ function Crearqr() {
           
           {/* <UploadUserImage></UploadUserImage>
           <ChangeAvatar></ChangeAvatar> */}
-            <BasicPopover></BasicPopover>
+            <PopoverInstr></PopoverInstr>
             
             
             
@@ -175,8 +167,7 @@ function Crearqr() {
             
   
           <div className="personalizarqr">
-                 <p className="grupo2">Personalizar QR</p>
-            {/* <h3><FaEdit style={{ color: '#43381b' }}/>Personaliza tu QR:</h3> */}
+                 <p className="grupo1">Personalizar QR</p>
             <Qrcomponent
               onColorChange={handleColorChange}
               onSizeChange={handleSizeChange}
@@ -184,7 +175,7 @@ function Crearqr() {
             />
           </div>
           <div className="qr-contenido">
-              <p className="grupo3">Tu QR</p>
+              <p className="grupo1">Tu QR</p>
               <div ref={qrRef}>
               <div ref={qrRef}>
               <QRCode
@@ -202,23 +193,25 @@ function Crearqr() {
           
     <div className="qr-opciones">
       <div className="qr-guardar">
-      <h3 className="grupo5">
+      <h3 className="grupo1" >
         {/* <FaSave></FaSave> */}
         Guardar</h3>       
-        <ul>
+        {/* <ul>
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange}/>
         </ul>
         <ul>
           <label for="descripcion">Descripción:</label>
           <input type="text" id="descripcion" name="descripcion" value={descripcion} onChange={handleDescripcionChange} />
-        </ul>            
-        <ul className="button22" >
+        </ul>             */}
+        <ul >
+            <li >
             <ModalTandem
-                    
-                    boton="Guardar"
-                    text={<GuardarQr></GuardarQr>}
-                />
+              boton="Guardar"
+              text={<GuardarQr></GuardarQr>}
+              
+            />
+            </li>
           {/* <button onClick={handleOpen} className='button22'>Guardar
             
           </button> */}
@@ -228,14 +221,14 @@ function Crearqr() {
         
       {/* <br /> */}
       <div className="qrcompartir">
-        <div className="grupo5">Compartir QR</div>
+        <div className="grupo1">Listado QR</div>
           <br></br>
         {/* <button onClick={/listQr} className='button22'>Listado Qr
         </button> */}
-        <Button><Link to="/listQr" style={{ textDecoration: `none`}}>Listado Qr</Link></Button>
+        <button className="button22"><Link to="/listQr" style={{ textDecoration: `none`,color: `black`}}>Listado Qr</Link></button>
       </div>
       <div className="qrcreado">
-        <div className="grupo5">Descargar QR</div>
+        <div className="grupo1">Descargar QR</div>
         <br></br>
       <button onClick={handleOpen} className='button22'>Descargar QR
          {/* <FaDownload style={{ color: '#43381b' }}/> */}
@@ -252,7 +245,7 @@ function Crearqr() {
                   <p>Selecciona el formato para descargar el QR</p>
                 </Typography>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  <div className="grupo5">
+                  <div className="grupo1">
                     <label>
                       <input
                         type="radio"

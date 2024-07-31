@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../componentes/layout/layout"
-import CardTandem from "../componentes/card/card"
+import CardTandem from "../componentes/cardTandem/cardTandem"
 
 
 

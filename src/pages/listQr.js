@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Layout from "../componentes/layout/layout";
-import PopoverDelete from './delete/popoverDelete';
-import UpdateUser from './update_user';
-import DeleteQr from './deleteQr';
 import { Link } from "gatsby"
-import Button from "../componentes/button/button"
-import { StaticImage } from 'gatsby-plugin-image';
+import DeleteQr from './deleteQr';
+// import Button from "../componentes/button/button"
 import ModalTandem from '../componentes/modal/modal';
-import DeleteUser from './delete/deleteUser';
-import ChangeRole from './change_role';
-import { colors } from '@mui/material';
+
 
 function TablaQr({ url }) {
     const [qrs,setQrs]=useState([]);
@@ -75,7 +70,7 @@ function TablaQr({ url }) {
             ))}
             </tbody>
         </table>
-        <Button><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></Button>
+        <button><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
         </div>
         </Layout>	 
         </>

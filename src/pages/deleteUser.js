@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 
 
-const DeleteUser = () => {
-    const [email, setEmail] = useState('');
+const DeleteUser = ({initialEmail}) => {
+    const [email] = useState(initialEmail);
     
-    const handleEmail=(e) => setEmail(e.target.value);
 
     const Delete = async () => {
         try {
@@ -27,19 +25,11 @@ const DeleteUser = () => {
     return (
             <div>
             <h3>Borrar Usuario</h3>
-            <form action="/my-handling-form-page" method="post" className="formAcceso" >
+            <form onSubmit={Delete} >
                 <ul className="lista">
                     
-                    <li >
-                    
-                        <div className="icono">
-                        <input
-                            placeholder='Email'
-                            type="text"
-                            value={email}
-                            onChange={handleEmail}
-                        />                
-                        </div>
+                    <li>
+                        <p>{email}</p>
                     </li>
                     
                 </ul>

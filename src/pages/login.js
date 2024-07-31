@@ -1,5 +1,5 @@
 // import React, { useState } from 'react';
-import './acceso.css'
+import './login.css'
 import Layout from "../componentes/layout/layout"
 
 
@@ -44,10 +44,11 @@ const Login = () => {
     return (
         
         <Layout>
-          <div className="containerAcceso">
-          <div className="imageFondo">
+          <div className="imagenAntigua">
+          <div className="fondoBlanco">
+            
             <h3>Acceso empleados</h3>
-            <form action="/my-handling-form-page" method="post" className="formAcceso" >
+            <form action="/my-handling-form-page" method="post">
               <ul className="lista">
                
                   <li className="mail">

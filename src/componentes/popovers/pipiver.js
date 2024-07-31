@@ -4,12 +4,8 @@ import PerfilPipiver from './perfilPipiver';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from "gatsby"
-import "../popover2/pipiver.css"
 import CerrarSesion from '../cerrarSesion/cerrar_sesion';
-import ChangeRole from '../../pages/change_role';
 import { StaticImage } from "gatsby-plugin-image";
-import UploadUserImage from '../upload-user-images/UploadUserImage';
-import ChangeAvatar from '../change-avatar/change-avatar';
 
 export default function Pipiver (){
    const [anchorEl, setAnchorEl] = React.useState(null);
@@ -98,7 +94,7 @@ export default function Pipiver (){
 
                  <Typography sx={{ p: 2 }}  style={{}}>
 
-                 <ul>
+                 <ul style={{color:'red', listStyle:'none'}}>
                     <li>
                       <PerfilPipiver></PerfilPipiver>
                     </li>

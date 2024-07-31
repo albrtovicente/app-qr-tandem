@@ -1,16 +1,16 @@
-import * as React from "react"
-import "../button/button.css"
+// import * as React from "react"
+// import "../button/button.css"
 
-const Button =({action, children})=>{
+// const Button =({action, children})=>{
     
-    return(
-        <>
+//     return(
+//         <>
 
-            <button onClick={action} className="botonPrincipal">
-            {children}
-            </button>
-        </>
+//             <button onClick={action} className="botonPrincipal">
+//             {children}
+//             </button>
+//         </>
     
-    )
-}
-export default Button
+//     )
+// }
+// export default Button

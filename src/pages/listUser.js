@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Layout from "../componentes/layout/layout";
-import PopoverDelete from './delete/popoverDelete';
-import UpdateUser from './update_user';
 import { Link } from "gatsby"
-import Button from "../componentes/button/button"
-import { StaticImage } from 'gatsby-plugin-image';
+import UpdateUser from './update_user';
 import ModalTandem from '../componentes/modal/modal';
-import DeleteUser from './delete/deleteUser';
+import DeleteUser from './deleteUser';
 import ChangeRole from './change_role';
-import { colors } from '@mui/material';
 function ListUser({ url }) {
 
     const [users,setUsers]=useState([]);
@@ -20,7 +16,7 @@ function ListUser({ url }) {
                     const response = await fetch('http://localhost/api-qr-tandem/v1/list-users.php', {
                         method: 'GET',
                         headers: {
-                            'Content-Type': 'application/json'
+                          'Content-Type': 'application/json'
                         }
                     });
                     if (!response.ok) {
@@ -64,25 +60,25 @@ function ListUser({ url }) {
                 <td className="table-data">{user.image_url}</td>
                 <td className="table-data">{user.created_at}</td>
                 <td>
-                <ModalTandem
+                    <ModalTandem
                     boton="Modificar"
                     text={<UpdateUser initialNombre={user.nombre} initialEmail={user.email} initialDelegacion={user.delegacion}></UpdateUser>}
-                />
+                    />
                 </td >
                 
                 <td>
                 <ModalTandem
                     
                     boton="Cambiar rol"
-                    text={<ChangeRole></ChangeRole>}
+                    text={<ChangeRole  initialEmail={user.email} initialRole={user.role}></ChangeRole>}
                 />
                 </td>
 
-                <td >
+                <td>
                 <ModalTandem
                     
-                    boton="Borrar"
-                    text={<DeleteUser></DeleteUser>}
+                    botonDel="Borrar"
+                    text={<DeleteUser initialEmail={user.email}></DeleteUser>}
                 />
                 </td>
             
@@ -92,7 +88,7 @@ function ListUser({ url }) {
             ))}
             </tbody>
         </table>
-        <Button><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></Button>
+        <button><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
         </div>	 
         </Layout>
         </>

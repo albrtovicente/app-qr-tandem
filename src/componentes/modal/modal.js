@@ -14,6 +14,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  
 };
 
 export default function ModalTandem({text,boton}) {
@@ -23,7 +24,7 @@ export default function ModalTandem({text,boton}) {
 
   return (
     <div>
-      <Button onClick={handleOpen}>{boton}</Button>
+      <Button onClick={handleOpen} style={{ textDecoration: `none`,color: `black`}} className="button22">{boton}</Button>
       <Modal
         open={open}
         onClose={handleClose}

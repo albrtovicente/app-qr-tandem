@@ -9,14 +9,9 @@ const Visita = () => {
   
     return (
       <Layout>
-         <h1 style={{textAlign: `center`}}>Visita</h1>  
-        
-  
-         
-  
+        <h1 style={{textAlign: `center`}}>Visita</h1>  
       </Layout>
       
     )
   }
-  
   export default Visita

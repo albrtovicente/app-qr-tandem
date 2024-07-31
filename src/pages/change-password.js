@@ -2,7 +2,6 @@
 import * as React from "react"
 import { useState } from 'react';
 import Layout from "../componentes/layout/layout"
-import './registro.css'
 const ChangePassword = () => {
    
 
@@ -13,6 +12,7 @@ const ChangePassword = () => {
 
     
     const handlePassword=(e) => setPassword(e.target.value);
+    const handleEmail=(e) => setEmail(e.target.value);
 
 
     const handleChangePassword = async () => {
@@ -49,7 +49,7 @@ const ChangePassword = () => {
                             type="email"
                             placeholder="Email"
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={handleEmail}
                         />                
                         </div>
                     </li>

@@ -1,10 +1,8 @@
 import * as React from "react"
 import Layout from "../componentes/layout/layout"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import Titulo from "../componentes/titulo/titulo"
-import Button from "../componentes/button/button"
-import TabTandem from "../componentes/tab/tab"
+import "../componentes/button/button.css"
 
 const IndexPage = () => {
   
@@ -12,20 +10,13 @@ const IndexPage = () => {
     <Layout>
       
       <Titulo></Titulo>  
+      
       <div className="imagenFondo">
         <div className="flexbutton">
-
-          <Button><Link to="/login" style={{color: `white`, textDecoration: `none`}}>Acceso Usuario</Link></Button>
-
-          <Button><Link to="/infoInstitucional" style={{color: `white`, textDecoration: `none`}}>Información</Link></Button>
-          
-
-         
+          <button className="botonPrincipal"><Link to="/login" style={{color: `white`, textDecoration: `none`}}>Acceso Usuario</Link></button>
+          <button className="botonPrincipal"><Link to="/infoInstitucional" style={{color: `white`, textDecoration: `none`}}>Información</Link></button>    
         </div>
       </div>
-
-        
-
     </Layout>
     
   )
@@ -33,4 +24,3 @@ const IndexPage = () => {
 
 export default IndexPage
 
-// export const Head = () => <title>Home Page</title>
