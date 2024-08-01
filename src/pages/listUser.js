@@ -8,7 +8,7 @@ import ChangeRole from './change_role';
 function ListUser({ url }) {
 
     const [users,setUsers]=useState([]);
-    const {message,setMessage}=useState('')
+    // const {message,setMessage}=useState('')
     
         useEffect(() => {
             const fetchUser = async () => {
@@ -24,7 +24,7 @@ function ListUser({ url }) {
                     }
                     const data = await response.json();
                     setUsers(data.users)
-                    setMessage(data.message)
+                    // setMessage(data.message)
                 } catch (error) {
                     console.log('Error al buscar la lista de usuarios', error);
                     console.error('Stack trace:', error.stack);
@@ -67,8 +67,7 @@ function ListUser({ url }) {
                 </td >
                 
                 <td>
-                <ModalTandem
-                    
+                <ModalTandem                    
                     boton="Cambiar rol"
                     text={<ChangeRole  initialEmail={user.email} initialRole={user.role}></ChangeRole>}
                 />
@@ -77,18 +76,19 @@ function ListUser({ url }) {
                 <td>
                 <ModalTandem
                     
-                    botonDel="Borrar"
+                    boton="Borrar"
                     text={<DeleteUser initialEmail={user.email}></DeleteUser>}
                 />
                 </td>
-            
+                {/* {message && <p>{message}</p>}  */}
             </tr>
+
             
             
             ))}
             </tbody>
         </table>
-        <button><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
+        <button className='buttonAtras'><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
         </div>	 
         </Layout>
         </>

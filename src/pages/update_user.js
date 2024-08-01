@@ -35,12 +35,12 @@ const UpdateUser = ({initialNombre, initialEmail, initialDelegacion}) => {
     return (
 
             <div>
-            <h3>Actualizar Usuario</h3>
+            <h3 className="grupo1" style={{ fontSize: `34px`, textAlign: `center`}}>Actualizar Usuario</h3>
             <form action="/my-handling-form-page" method="post" className="formAcceso" >
                 <ul className="lista">
                     
                     <li>
-                        <p>
+                        <p style={{ textAlign: `center`, fontSize: `34px`}}>
                             {email}
                         </p>                            
                     </li>
@@ -72,7 +72,8 @@ const UpdateUser = ({initialNombre, initialEmail, initialDelegacion}) => {
             
             
             <button onClick={handleUpdateUser} className="button22">Actualizar usuario</button>
-            
+            <p>{message && <p>{message}</p>} </p>
+
             
             </div>
     );

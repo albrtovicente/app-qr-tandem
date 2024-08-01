@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import "../modal/modal.css"
 
 const style = {
   position: 'absolute',
@@ -23,7 +24,7 @@ export default function ModalTandem({text,boton}) {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <div className='fondoModal'>
       <Button onClick={handleOpen} style={{ textDecoration: `none`,color: `black`}} className="button22">{boton}</Button>
       <Modal
         open={open}
@@ -31,7 +32,7 @@ export default function ModalTandem({text,boton}) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} className="fondoModal">
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {text}
           </Typography>

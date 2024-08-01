@@ -14,7 +14,7 @@ export default function PerfilPipiver (){
    };
    
    const rol = localStorage.getItem('tandem_role')
-   const delegacion = localStorage.getItem('tandem_delegacion')
+   const deleg = localStorage.getItem('tandem_delegacion')
    const nombre = localStorage.getItem('tandem_nombre')
    const email = localStorage.getItem('tandem_email')
    const open = Boolean(anchorEl);
@@ -39,7 +39,7 @@ return(
                 <ul>
                     <li>Nombre: {nombre}</li>
                     <li>Email: {email}</li>
-                    <li>Delegacion: {delegacion}</li>
+                    <li>Delegacion: {deleg}</li>
                     <li>Rol: {rol}</li>
                 </ul>
             </Typography>

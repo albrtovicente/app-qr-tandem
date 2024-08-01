@@ -8,7 +8,7 @@ import ModalTandem from '../componentes/modal/modal';
 
 function TablaQr({ url }) {
     const [qrs,setQrs]=useState([]);
-    const {message,setMessage}=useState('')
+    // const {message,setMessage}=useState('')
     
         useEffect(() => {
             const fetchUser = async () => {
@@ -22,11 +22,11 @@ function TablaQr({ url }) {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
-                    const data = await response.json();
-                    setQrs(data.qr_codes)
-                    setMessage(data.message)
+                    const respuesta = await response.json();
+                    setQrs(respuesta.qr_codes)
+                    // setMessage(respuesta.message)
                 } catch (error) {
-                    console.log('Error al buscar la lista de usuarios', error);
+                    console.log('Error al buscar la lista de qr', error);
                     console.error('Stack trace:', error.stack);
                 }
             };
@@ -63,14 +63,14 @@ function TablaQr({ url }) {
                     text={<DeleteQr></DeleteQr>}
                 />
                 </td>
-            
+                {/* <p>{message && <p>{message}</p>} </p>  */}
             </tr>
             
             
             ))}
             </tbody>
         </table>
-        <button><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
+        <button className='buttonAtras'><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
         </div>
         </Layout>	 
         </>
