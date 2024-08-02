@@ -102,6 +102,7 @@ function Crearqr() {
   
 
   const rol = localStorage.getItem('tandem_role')
+  
    if(rol=='guest'){
     return (
       <>

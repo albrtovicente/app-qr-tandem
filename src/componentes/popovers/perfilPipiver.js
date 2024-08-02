@@ -12,11 +12,12 @@ export default function PerfilPipiver (){
    const handleClose = () => {
      setAnchorEl(null);
    };
-   
+
    const rol = localStorage.getItem('tandem_role')
    const deleg = localStorage.getItem('tandem_delegacion')
    const nombre = localStorage.getItem('tandem_nombre')
    const email = localStorage.getItem('tandem_email')
+    
    const open = Boolean(anchorEl);
    const id = open ? 'simple-popover' : undefined;
 return(
@@ -35,13 +36,14 @@ return(
             }}
         >
             <Typography sx={{ p: 2 }}  style={{}}>
-
+ 
                 <ul>
                     <li>Nombre: {nombre}</li>
                     <li>Email: {email}</li>
                     <li>Delegacion: {deleg}</li>
                     <li>Rol: {rol}</li>
                 </ul>
+            
             </Typography>
         </Popover>
     </div>
