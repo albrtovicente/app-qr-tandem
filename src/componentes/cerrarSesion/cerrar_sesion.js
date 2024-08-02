@@ -4,15 +4,12 @@ import { Link } from 'gatsby';
 const CerrarSesion = () => {
   const handleCerrarSesion =()=>{
     window.location.href='/';
-    if (typeof window !== "undefined") {
 
     localStorage.removeItem('tandem_role');
     localStorage.removeItem('tandem_id');
     localStorage.removeItem('tandem_email');
     // localStorage.removeItem('tndm_token');
-  } else {
-    setMessage('Credenciales incorrectas');
-  }
+  
     window.location.href='/login'
   }
 

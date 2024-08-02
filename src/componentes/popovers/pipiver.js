@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Popover from '@mui/material/Popover';
 import PerfilPipiver from './perfilPipiver';
 import Typography from '@mui/material/Typography';
@@ -9,6 +9,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export default function Pipiver (){
    const [anchorEl, setAnchorEl] = React.useState(null);
+   const [role, setRole] = useState(null);
    const handleClick = (event) => {
      setAnchorEl(event.currentTarget);
    };
@@ -16,10 +17,17 @@ export default function Pipiver (){
      setAnchorEl(null);
    };
    
-   const rol = localStorage.getItem('tandem_role')
+//    const rol = localStorage.getItem('tandem_role')
+    useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setRole(localStorage.getItem('tandem_role'));
+    }
+  }, []);
    const open = Boolean(anchorEl);
    const id = open ? 'simple-popover' : undefined;
-   if(rol=='employee'){
+
+    
+   if(role ==='employee'){
      return(
          <>
          <Button aria-describedby={id} variant="contained" onClick={handleClick}>
@@ -66,7 +74,7 @@ export default function Pipiver (){
          </>
      )
  }
-   if(rol=='admin'){
+   if(role ==='admin'){
      return(
          <>
          

@@ -99,9 +99,10 @@ function Crearqr() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  
-
-  const rol = localStorage.getItem('tandem_role')
+  let rol = null;
+  if (typeof window !== "undefined") {
+    rol = localStorage.getItem('tandem_role');
+  }
   
    if(rol=='guest'){
     return (
