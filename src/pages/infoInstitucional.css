@@ -1,0 +1,41 @@
+.flexintitucional{
+    display: flex;
+}
+.indiceInstitucional{
+    background-color: #e6e0e0;
+    padding-right: 40px;
+}
+.Iinstitucional{
+    margin-left: 40px;
+
+}
+.flexintitucional2{
+    display: flex;
+
+}
+.imgInst{
+    width: 500px;
+}
+.divaInst{
+    
+}
+.aInst {
+    align-self: stretch;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+.aInst:hover, .aInst:focus {
+    background-size: 100% 2px;
+}
+.imgInst{
+    align-items: center;
+  /* background-image: url("../componentes/images/texture4.jpg");
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px; */
+}

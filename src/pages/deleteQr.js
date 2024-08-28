@@ -1,11 +1,12 @@
-
 import React, { useState } from 'react';
 
 
-const DeleteQr = () => {
-    const [nombre_ref, setNombre_ref] = useState('');
-    
-    const handleNombre_ref=(e) => setNombre_ref(e.target.value);
+const DeleteQr = ({initialNombreRef}) => {
+
+    const [nombre_ref] = useState(initialNombreRef);
+    const [message, setMessage] = useState('');
+
+    // const handleNombre_ref=(e) => setNombre_ref(e.target.value);
 
     const Delete2 = async () => {
         try {
@@ -17,8 +18,9 @@ const DeleteQr = () => {
                 body: JSON.stringify({nombre_ref})
             });
             
-            const respuesta = await response.json();
-            
+            const data = await response.json();
+            setMessage(data.message);
+
             } catch (error) {
                 console.error('Error Borrando qr', error);
             }
@@ -27,7 +29,7 @@ const DeleteQr = () => {
     return (
             <div>
             <h3>Borrar Qr</h3>
-            <form action="/my-handling-form-page" method="post" className="formAcceso" >
+            {/* <form action="/my-handling-form-page" method="post" className="formAcceso" >
                 <ul className="lista">
                     
                     <li >
@@ -43,12 +45,22 @@ const DeleteQr = () => {
                     </li>
                     
                 </ul>
+            </form> */}
+            <form onSubmit={Delete2} >
+                <ul className="lista">
+                    
+                    <li>
+                        <p>{nombre_ref}</p>
+                    </li>
+                    
+                </ul>
             </form>
             
             
             <button onClick={Delete2} className='button22'>Eliminar Qr</button>
             
-            
+            <p>{message && <p>{message}</p>} </p>
+
             </div>
     );
 };

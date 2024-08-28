@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 
 const DeleteUser = ({initialEmail}) => {
     const [email] = useState(initialEmail);
-    
+    const [message, setMessage] = useState('');
+
 
     const Delete = async () => {
         try {
@@ -16,7 +17,8 @@ const DeleteUser = ({initialEmail}) => {
             });
             
             const data = await response.json();
-            
+            setMessage(data.message);
+
             } catch (error) {
                 console.error('Error registrando usuario', error);
             }
@@ -38,7 +40,8 @@ const DeleteUser = ({initialEmail}) => {
             
             <button onClick={Delete} className='button22'>Eliminar usuario</button>
             
-            
+            <p>{message && <p>{message}</p>} </p>
+
             </div>
     );
 };

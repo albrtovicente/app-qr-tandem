@@ -60,7 +60,7 @@ function TablaQr({ url }) {
                 <ModalTandem
                     
                     boton="Borrar"
-                    text={<DeleteQr></DeleteQr>}
+                    text={<DeleteQr initialNombreRef={qr_codes.qr_nombre_ref}></DeleteQr>}
                 />
                 </td>
                 {/* <p>{message && <p>{message}</p>} </p>  */}

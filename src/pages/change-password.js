@@ -1,7 +1,8 @@
 
 import * as React from "react"
 import { useState } from 'react';
-import Layout from "../componentes/layout/layout"
+import Layout from "../componentes/layout/layout";
+import '../pages/change-password.css'
 const ChangePassword = () => {
    
 
@@ -35,8 +36,8 @@ const ChangePassword = () => {
     
     return (
         <Layout>
-            <div className="containerAcceso">
-               <div className="imageFondo">
+            <div className="containerChangePassword">
+               <div className="imageFondoChangePassword">
             
             <h3>Cambio de Contraseña</h3>
             <form action="/my-handling-form-page" method="post" className="formAcceso" >

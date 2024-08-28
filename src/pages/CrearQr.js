@@ -206,18 +206,24 @@ function Crearqr() {
           <label for="descripcion">Descripción:</label>
           <input type="text" id="descripcion" name="descripcion" value={descripcion} onChange={handleDescripcionChange} />
         </ul>             */}
-        <ul >
+        {/* <ul >
             <li >
             <ModalTandem
               boton="Guardar"
               text={<GuardarQr></GuardarQr>}
               
             />
-            </li>
+            </li> */}
           {/* <button onClick={handleOpen} className='button22'>Guardar
             
           </button> */}
-        </ul>            
+        {/* </ul>             */}
+        <GuardarQr 
+          data={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue} 
+          nref={nombre} 
+          desc={descripcion} 
+        >
+        </GuardarQr>
               
       </div>
         
