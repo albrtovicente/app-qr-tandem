@@ -20,7 +20,7 @@ const Administracion = () => {
              <a href="/infooficiales" role='button' className="aInst">Actos oficiales e institucionales</a> <br/><br/>
              <a href="/infocasaRey" role='button' className="aInst">Casa de S.M. el rey</a> <br/><br/>
              <a href="/inforetratosOficiales" role='button' className="aInst">Retratos oficiales</a> <br/><br/>
-             <a href="/infoministerio" role='button' className="aInst">Ministerio de la presidencia</a> <br/>
+             <a href="/infoministerio" role='button' className="aInst">Ministerio de la presidencia</a> <br/><br/><br/>
 
           </div>
 
@@ -34,11 +34,24 @@ const Administracion = () => {
             </div>
             <h3 style={{color:`#e2bb8f`}}>MIEMBROS NATOS
             </h3>
-            <h4>Ana de la Cueva Fernández</h4>
+            <h4 style={{color: `#7A774E`}}>Ana de la Cueva Fernández</h4>
             <p>PRESIDENTA DE PATRIMONIO NACIONAL</p>
-            <p>
+            <div className="flexImg">
+               <div className="imgInst">
+                <StaticImage 
+                  style={{width: `300px`,height: `200px`, textAlign: `center`}}
+                  src="..\componentes\images\presidenta.jpeg"
+                />
+              </div>
+              <div className="pImg">
+              <p>
              Es licenciada en Ciencias Económicas y Empresariales por la Universidad Autónoma de Madrid en la especialidad de Economía Cuantitativa.            </p>
             
+            
+            
+            </div>
+            </div>
+
             <p>
             Ha desarrollado toda su carrera profesional en el Ministerio de Asuntos Económicos y Transformación Digital, donde ingresó por oposición en el Cuerpo de Técnicos Comerciales y Economistas del Estado en 1991.            </p>
             <p>
@@ -54,9 +67,24 @@ const Administracion = () => {
             <p>
             Ha sido miembro de los siguientes Consejos de Administración e instituciones nacionales e internacionales: consejera de la Casa de la Moneda y Timbre, consejera de Expansión Exterior (actualmente ICEX), Consejera de la Compañía Española de Crédito a la Exportación (CESCE), consejera de RENFE, consejera de la Sociedad Estatal de Participaciones Industriales (SEPI), consejera de la Autoridad Macroprudencial Consejo de Estabilidad Financiera (AMCESFI), gobernadora alterna por España en el Grupo Banco Mundial, en el Banco Interamericano de Desarrollo, el Banco Centroamericano de Integración Económica, el Banco Asiático de Desarrollo, el Banco Asiático para Inversión en Infraestructuras, el Banco Africano de Desarrollo y el Banco Europeo de Reconstrucción y Desarrollo, presidenta de la Comisión para la prevención del blanqueo de capitales y las infracciones monetarias, miembro de la Comisión de Coordinación del Plan de Recuperación, Transformación y Resiliencia.
             </p>
-
-            <h4>MARÍA DOLORES MENÉNDEZ COMPANY</h4>
+<br/>
+            <h4 style={{color: `#7A774E`}}>MARÍA DOLORES MENÉNDEZ COMPANY</h4>
             <p>GERENTE DE PATRIMONIO NACIONAL</p>
+            <div className="flexImg">
+               <div className="imgInst">
+                <StaticImage 
+                  style={{width: `200px`,height: `200px`, textAlign: `center`}}
+                  src="..\componentes\images\gerente.jpg"
+                />
+              </div>
+              <div className="pImg">
+              <p>
+             Es licenciada en Ciencias Económicas y Empresariales por la Universidad Autónoma de Madrid en la especialidad de Economía Cuantitativa.            </p>
+            
+            
+            
+            </div>
+            </div>
             <p>
             Es Licenciada en Ciencias Económicas y Empresariales, rama de Economía de la Empresa, por la Universidad Complutense de Madrid. Funcionaria en servicio activo de la Escala Técnica de Gestión de Organismos Autónomos y en excedencia del Cuerpo Técnico de Auditoría y Contabilidad, Executive Master in Public Administration EMPA. ESADE.    
             </p>        

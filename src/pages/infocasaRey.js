@@ -20,7 +20,7 @@ const InfocasaRey = () => {
              <a href="/infoadministrador" role='button' className="aInst">Consejo de administrador</a> <br/><br/>
              <a href="/infooficiales" role='button' className="aInst">Actos oficiales e institucionales</a> <br/><br/>
              <a href="/inforetratosOficiales" role='button' className="aInst">Retratos oficiales</a> <br/><br/>
-             <a href="/infoministerio" role='button' className="aInst">Ministerio de la presidencia</a> <br/>
+             <a href="/infoministerio" role='button' className="aInst">Ministerio de la presidencia</a> <br/><br/><br/>
 
           </div>
 

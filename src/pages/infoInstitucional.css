@@ -9,6 +9,10 @@
     margin-left: 40px;
 
 }
+.flexImg{
+ display: flex;
+ font-size: 20px;
+}
 .flexintitucional2{
     display: flex;
 
