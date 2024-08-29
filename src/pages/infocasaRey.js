@@ -30,7 +30,7 @@ const InfocasaRey = () => {
                <div className="imgInst">
                 <StaticImage 
                   style={{width: `1300px`,height: `200px`, textAlign: `center`}}
-                  src="..\componentes\images\aranjuez.jpg"
+                  src="..\images\aranjuez.jpg"
                 />
               </div>
             </p>

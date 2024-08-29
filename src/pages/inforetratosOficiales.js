@@ -29,7 +29,7 @@ const InfoRetratosOficiales = () => {
                <div className="imgInst">
                 <StaticImage 
                   style={{width: `300px`,height: `600px`, textAlign: `center`}}
-                  src="..\componentes\images\rey.jpg"
+                  src="..\images\rey.jpg"
                 />
               </div>
             </p>

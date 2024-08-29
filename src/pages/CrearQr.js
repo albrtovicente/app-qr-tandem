@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { useState, useRef } from "react";
 import Layout from "../componentes/layout/layout";
 import Qrcomponent from "../componentes/qrcomp/qr";
-import QRCode from 'qrcode.react';
+import QRCode from "qrcode.react";
 import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from "downloadjs";
 import CenteredTabs from "../componentes/tab/tab";
@@ -137,7 +137,7 @@ function Crearqr() {
                 /></Link> */}
               <Pipiver>
                 <StaticImage className="logoheader"
-                  src="..\componentes\images\acceso.png"
+                  src="..\images\acceso.png"
                   loading="eager"
                   width={80}
                   height={80}
@@ -198,14 +198,21 @@ function Crearqr() {
       <h3 className="grupo1" >
         {/* <FaSave></FaSave> */}
         Guardar</h3>       
-        {/* <ul>
+         <ul>
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange}/>
         </ul>
         <ul>
           <label for="descripcion">Descripción:</label>
           <input type="text" id="descripcion" name="descripcion" value={descripcion} onChange={handleDescripcionChange} />
-        </ul>             */}
+        </ul>  
+        <GuardarQr 
+                data={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue} 
+                nref={nombre} 
+                desc={descripcion} 
+                
+                >
+        </GuardarQr>         
         {/* <ul >
             <li >
             <ModalTandem
@@ -218,12 +225,7 @@ function Crearqr() {
             
           </button> */}
         {/* </ul>             */}
-        <GuardarQr 
-          data={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue} 
-          nref={nombre} 
-          desc={descripcion} 
-        >
-        </GuardarQr>
+        
               
       </div>
         

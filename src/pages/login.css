@@ -9,7 +9,7 @@
 
 }
 .imagenAntigua{
-  background-image: url("../componentes/images/texture4.jpg");
+  background-image: url("../images/texture4.jpg");
   border: 2px solid black;
   padding: 20px;
   border-radius: 10px;
@@ -33,7 +33,7 @@
 
 /* ICONOS LISTA */
 .icono {
-  background-image: url('../componentes/images/correo.png');
+  background-image: url('../images/correo.png');
   background-repeat: no-repeat;
   background-position: 4px center;
   background-size: 20px;
@@ -56,7 +56,7 @@
 
 
 .icono2 {
-  background-image: url('../componentes/images/candado.png');
+  background-image: url('../images/candado.png');
   background-repeat: no-repeat;
   background-position: 4px center;
   background-size: 20px;
@@ -77,7 +77,7 @@
   outline: none;
 }
 .icono3 {
-  background-image: url('../componentes/images/acceso.png');
+  background-image: url('../images/acceso.png');
   background-repeat: no-repeat;
   background-position: 4px center;
   background-size: 20px;
@@ -99,7 +99,7 @@
 }
 
 .icono4 {
-  background-image: url('../componentes/images/delegacion.png');
+  background-image: url('../images/delegacion.png');
   background-repeat: no-repeat;
   background-position: 4px center;
   background-size: 20px;

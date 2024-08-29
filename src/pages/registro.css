@@ -5,7 +5,7 @@
   height: 100vh;
 } */
  .imgFondo{
-  background-image: url('../componentes/images/ara2.jpg');
+  background-image: url('../images/ara2.jpg');
   z-index: -1;
  }
 .signupFrm {

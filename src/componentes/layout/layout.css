@@ -8,7 +8,7 @@
 
 }
 .imagenFondo{
-  background-image: url("../images/ara2.jpg");
+  background-image: url("../../images/ara2.jpg");
   background-size: cover;
   height:65vh;
   background-repeat: no-repeat;

@@ -29,7 +29,7 @@ const Administracion = () => {
             <div className="imgInst">
                 <StaticImage 
                   style={{width: `1300px`,height: `200px`, textAlign: `center`}}
-                  src="..\componentes\images\aranjuez.jpg"
+                  src="..\images\aranjuez.jpg"
                 />
             </div>
             <h3 style={{color:`#e2bb8f`}}>MIEMBROS NATOS
@@ -40,7 +40,7 @@ const Administracion = () => {
                <div className="imgInst">
                 <StaticImage 
                   style={{width: `300px`,height: `200px`, textAlign: `center`}}
-                  src="..\componentes\images\presidenta.jpeg"
+                  src="..\images\presidenta.jpeg"
                 />
               </div>
               <div className="pImg">
@@ -74,7 +74,7 @@ const Administracion = () => {
                <div className="imgInst">
                 <StaticImage 
                   style={{width: `200px`,height: `200px`, textAlign: `center`}}
-                  src="..\componentes\images\gerente.jpg"
+                  src="..\images\gerente.jpg"
                 />
               </div>
               <div className="pImg">
