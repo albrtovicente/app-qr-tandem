@@ -41,25 +41,26 @@ const Footer =()=>{
                     <div className="item1">
                         <Link to="/#">
                             <StaticImage className="logofooter"
-                                src="../images/logo1.png"
-                            /></Link>
+                                src="../../images/logo1.png"
+                            />
+                        </Link>
                     </div>
                     <div className="item2">
                         <Link to="/#">
                             <StaticImage className="logofooter"
-                                src="../images/logo2.png"
+                                src="../../images/logo2.png"
                             /></Link>
                     </div>
                     <div className="item3">
                         <Link to="/#">
                             <StaticImage className="logofooter"
-                                src="../images/logo3.png"
+                                src="../../images/logo3.png"
                             /></Link>
                     </div>
                     <div className="item4">
                         <Link to="/#">
                             <StaticImage className="logofooter"
-                                src="../images/logo5.png"
+                                src="../../images/logo5.png"
                             /></Link>
                     </div>
             </div>
@@ -67,25 +68,25 @@ const Footer =()=>{
                     <div className="item5">
                         <Link to="/#">
                             <StaticImage className="redesimg"
-                                src="../images/inst.png"
+                                src="../../images/inst.png"
                             /></Link>
                     </div>
                     <div className="item6">
                         <Link to="/#">
                             <StaticImage className="redesimg"
-                                src="../images/tiktok.png"
+                                src="../../images/tiktok.png"
                             /></Link>
                     </div>
                     <div className="item7">
                         <Link to="/#">
                             <StaticImage className="redesimg"
-                                src="../images/twitter.png"
+                                src="../../images/twitter.png"
                             /></Link>
                     </div>
                     <div className="item8">
                         <Link to="/#">
                             <StaticImage className="redesimg"
-                                src="../images/youtube.png"
+                                src="../../images/youtube.png"
                             /></Link>
                     </div>
                 </div>

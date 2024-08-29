@@ -74,7 +74,7 @@ const Administracion = () => {
                <div className="imgInst">
                 <StaticImage 
                   style={{width: `200px`,height: `200px`, textAlign: `center`}}
-                  src="..\images\gerente.jpg"
+                  src="../images/gerente.jpg"
                 />
               </div>
               <div className="pImg">
