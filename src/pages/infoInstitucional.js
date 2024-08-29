@@ -27,8 +27,8 @@ const InfoInstitucional = () => {
               <div className="flexImg">
                <div className="imgInst">
                 <StaticImage 
-                  src="..\images\presidenta.jpeg"
-                  // style={{width: `500px`,height: `500px`, textAlign: `center`, padding:`1em`}}
+                  src="../images/presidenta.jpeg"
+                  style={{width: `500px`,height: `500px`, textAlign: `center`, padding:`1em`}}
 
                 />
               </div>
