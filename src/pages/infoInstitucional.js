@@ -1,9 +1,7 @@
 import * as React from "react"
 import Layout from "../componentes/layout/layout"
-import CardTandem from "../componentes/cardTandem/cardTandem"
 import './infoInstitucional.css';
-import { StaticImage } from "gatsby-plugin-image"
-
+import { StaticImage } from "gatsby-plugin-image";
 
 
 const InfoInstitucional = () => {
