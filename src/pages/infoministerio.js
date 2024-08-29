@@ -29,7 +29,7 @@ const InfoMinisterio = () => {
                <div className="imgInst">
                 <StaticImage 
                   style={{width: `1300px`,height: `200px`, textAlign: `center`}}
-                  src="..\images\ministerio.jpg"
+                  src="../images/ministerio.jpg"
                 />
               </div>
             </p>

@@ -29,7 +29,7 @@ const Administracion = () => {
             <div className="imgInst">
                 <StaticImage 
                   style={{width: `1300px`,height: `200px`, textAlign: `center`}}
-                  src="..\images\aranjuez.jpg"
+                  src="../images/aranjuez.jpg"
                 />
             </div>
             <h3 style={{color:`#e2bb8f`}}>MIEMBROS NATOS
@@ -40,7 +40,7 @@ const Administracion = () => {
                <div className="imgInst">
                 <StaticImage 
                   style={{width: `300px`,height: `200px`, textAlign: `center`}}
-                  src="..\images\presidenta.jpeg"
+                  src="../images/presidenta.jpeg"
                 />
               </div>
               <div className="pImg">
