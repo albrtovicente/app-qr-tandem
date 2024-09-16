@@ -14,7 +14,7 @@ const Footer =()=>{
             <div class="logo">
                 <div className="imgLogo"><Link to="/" style={{color: `white`, textDecoration: `none`, padding: `20%`}}>
                             <StaticImage className="logoheader"
-                        src="../images/pn1.png"
+                        src="../../images/pn1.png"
                         /></Link></div>
             </div>
             <nav class="link">

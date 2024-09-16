@@ -2,12 +2,26 @@ import * as React from "react"
 import Layout from "../componentes/layout/layout"
 import './infoInstitucional.css';
 import { StaticImage } from "gatsby-plugin-image";
-
+import ImgParrafo from "../componentes/seccion/imgParrafo";
 
 const InfoInstitucional = () => {
   
     return (
       <Layout>
+        {/* <ImgParrafo 
+          
+          imagen={
+            <StaticImage 
+                  src="../images/presidenta.jpeg"
+                  style={{width: `500px`,height: `500px`, textAlign: `center`, padding:`1em`}}
+
+                />
+          } 
+          titulo={"Hola"} 
+          text={"asdasd"} 
+                
+        >
+        </ImgParrafo>  */}
         <div className="flexintitucional">
           
           <div className="indiceInstitucional">

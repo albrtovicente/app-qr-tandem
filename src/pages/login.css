@@ -13,6 +13,11 @@
   border: 2px solid black;
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh ;
 } 
 
 /* LISTA */
@@ -32,6 +37,30 @@
 
 
 /* ICONOS LISTA */
+/* .icono {
+  background-image: url('../images/correo.png');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 20px;
+  display: flex;
+  
+  width: 300px;
+  padding-left: 28px;
+  height: 40px;
+  border: 1px solid #0971a3;
+  border-radius: 3px;
+  background-size: cover;
+}
+.icono input {
+  width: 100%;
+  font-size: 0.9em;
+  border: none;
+}
+.icono input:focus {
+  outline: none;
+} */
+
+
 .icono {
   background-image: url('../images/correo.png');
   background-repeat: no-repeat;
@@ -53,8 +82,6 @@
 .icono input:focus {
   outline: none;
 }
-
-
 .icono2 {
   background-image: url('../images/candado.png');
   background-repeat: no-repeat;

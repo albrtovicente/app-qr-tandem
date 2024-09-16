@@ -137,7 +137,7 @@ function Crearqr() {
                 /></Link> */}
               <Pipiver>
                 <StaticImage className="logoheader"
-                  src="..\images\acceso.png"
+                  src="..\acceso.png"
                   loading="eager"
                   width={80}
                   height={80}
@@ -207,11 +207,12 @@ function Crearqr() {
           <input type="text" id="descripcion" name="descripcion" value={descripcion} onChange={handleDescripcionChange} />
         </ul>  
         <GuardarQr 
-                data={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue} 
-                nref={nombre} 
-                desc={descripcion} 
+          
+          data={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue} 
+          nref={nombre} 
+          desc={descripcion} 
                 
-                >
+        >
         </GuardarQr>         
         {/* <ul >
             <li >

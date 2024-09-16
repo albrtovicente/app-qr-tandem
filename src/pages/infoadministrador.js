@@ -3,6 +3,7 @@ import Layout from "../componentes/layout/layout"
 import CardTandem from "../componentes/cardTandem/cardTandem"
 import './infoInstitucional.css';
 import { StaticImage } from "gatsby-plugin-image"
+import PopoverComp from "../componentes/popovers/popovercomp";
 
 
 
@@ -25,81 +26,183 @@ const Administracion = () => {
           </div>
 
           <div className="Iinstitucional">
-            <h1 style={{textAlign: `center`}}>Consejo de Administración</h1>  
+          <div className="containerAdm">
             <div className="imgInst">
                 <StaticImage 
-                  style={{width: `1300px`,height: `200px`, textAlign: `center`}}
-                  src="../images/aranjuez.jpg"
+                  // style={{width: `1300px`,height: `200px`, textAlign: `center`}}
+                  style={{marginTop:`30px`}}
+                  src="../images/fondo.jpg"
                 />
             </div>
-            <h3 style={{color:`#e2bb8f`}}>MIEMBROS NATOS
-            </h3>
-            <h4 style={{color: `#7A774E`}}>Ana de la Cueva Fernández</h4>
-            <p>PRESIDENTA DE PATRIMONIO NACIONAL</p>
-            <div className="flexImg">
-               <div className="imgInst">
-                <StaticImage 
-                  style={{width: `300px`,height: `200px`, textAlign: `center`}}
-                  src="../images/presidenta.jpeg"
-                />
-              </div>
-              <div className="pImg">
-              <p>
-             Es licenciada en Ciencias Económicas y Empresariales por la Universidad Autónoma de Madrid en la especialidad de Economía Cuantitativa.            </p>
-            
-            
-            
-            </div>
-            </div>
+          <div class="container">
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/presidenta.jpeg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
 
-            <p>
-            Ha desarrollado toda su carrera profesional en el Ministerio de Asuntos Económicos y Transformación Digital, donde ingresó por oposición en el Cuerpo de Técnicos Comerciales y Economistas del Estado en 1991.            </p>
-            <p>
-            Es importante destacar la unidad de sus bienes, ligados por un proceso de creación continuo, especialmente intenso entre el siglo XVI y el XIX, y que ha dado lugar a conjuntos donde las piezas muebles y obras de arte están ligadas a los inmuebles, y todo a la historia política y cultural de España. La coherencia de este conjunto, y las interrelaciones entre espacios, objetos y memoria que en él se producen, otorgan a este Patrimonio su primordial valor cultural e histórico
-            </p>
-            
-            <p>
-            Ha sido secretaria de Estado de Economía y Apoyo a la Empresa desde junio de 2018 hasta mayo de 2021, ostentando la Secretaría de la Comisión Delegada del Gobierno para Asuntos Económicos   
-            </p>
-            
-            <p>
-            Anteriormente había desempeñado diversos cargos de responsabilidad en el Ministerio, en la Dirección General de Política Comercial e Inversiones Exteriores, la Dirección General de Política Económica y la Dirección General del Tesoro y fue directora del Gabinete del secretario de Estado de Economía.            </p>
-            <p>
-            Ha sido miembro de los siguientes Consejos de Administración e instituciones nacionales e internacionales: consejera de la Casa de la Moneda y Timbre, consejera de Expansión Exterior (actualmente ICEX), Consejera de la Compañía Española de Crédito a la Exportación (CESCE), consejera de RENFE, consejera de la Sociedad Estatal de Participaciones Industriales (SEPI), consejera de la Autoridad Macroprudencial Consejo de Estabilidad Financiera (AMCESFI), gobernadora alterna por España en el Grupo Banco Mundial, en el Banco Interamericano de Desarrollo, el Banco Centroamericano de Integración Económica, el Banco Asiático de Desarrollo, el Banco Asiático para Inversión en Infraestructuras, el Banco Africano de Desarrollo y el Banco Europeo de Reconstrucción y Desarrollo, presidenta de la Comisión para la prevención del blanqueo de capitales y las infracciones monetarias, miembro de la Comisión de Coordinación del Plan de Recuperación, Transformación y Resiliencia.
-            </p>
-<br/>
-            <h4 style={{color: `#7A774E`}}>MARÍA DOLORES MENÉNDEZ COMPANY</h4>
-            <p>GERENTE DE PATRIMONIO NACIONAL</p>
-            <div className="flexImg">
-               <div className="imgInst">
-                <StaticImage 
-                  style={{width: `200px`,height: `200px`, textAlign: `center`}}
-                  src="../images/gerente.jpg"
-                />
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>ANA DE LA CUEVA FERNÁNDEZ </h4>
+                  <h5 style={{color:`#e6e0e0`}}>PRESIDENTA DE PATRIMONIO NACIONAL</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Es licenciada en Ciencias Económicas y Empresariales por la Universidad Autónoma de Madrid en la especialidad de Economía Cuantitativa."
+                  />
+                  {/* <a href="https://www.patrimonionacional.es/sobre-patrimonio/consejo-de-administracion">Read More</a> */}
+                </div>
               </div>
-              <div className="pImg">
-              <p>
-             Es licenciada en Ciencias Económicas y Empresariales por la Universidad Autónoma de Madrid en la especialidad de Economía Cuantitativa.            </p>
+            </div>
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/gerente.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>MARÍA DOLORES MENÉNDEZ </h4>
+                  <h5 style={{color:`#e6e0e0`}}>GERENTE DE PATRIMONIO NACIONAL</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Es Licenciada en Ciencias Económicas y Empresariales, rama de Economía de la Empresa, por la Universidad Complutense de Madrid."
+                  />                
+              </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/consejera.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>ANA MARÍA ARIAS DE COSSÍO</h4>
+                  <h5 style={{color:`#e6e0e0`}}>CONSEJERA</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Doctora en Historia del Arte y catedrática emérita de la Universidad Complutense de Madrid."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/consejero.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>FRANCISCO BELIL CREIXELL </h4>
+                  <h5 style={{color:`#e6e0e0`}}>CONSEJERO</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Ingeniero Superior en la Universidad Politécnica de Cataluña."
+                  />                
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/consejera2.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>Mª ÁNGELES HERMOSILLA</h4>
+                  <h5 style={{color:`#e6e0e0`}}>CONSEJERA</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Catedrática de Teoría de la Literatura y Literatura Comparada en la Universidad de Córdoba."
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/consejero2.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>ALBERTO HERRERA RODRÍGUEZ</h4>
+                  <h5 style={{color:`#e6e0e0`}}>CONSEJERO</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Subsecretario del Ministerio de Presidencia, Justicia y Relaciones con las Cortes ."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/consejero3.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>GREGORIO MARAÑÓN</h4>
+                  <h5 style={{color:`#e6e0e0`}}>CONSEJERO</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Presidente del Teatro Real y de la Fundación Ortega-Marañón."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/consejera4.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>JUDIT GONZÁLEZ PEDRAZ</h4>
+                  <h5 style={{color:`#e6e0e0`}}>CONSEJERA</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Secretaria general de la Presidencia del Gobierno."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                    <StaticImage 
+                      src="../images/consejero4.jpg"
+                      style={{width: `150px`,height: `150px`, textAlign: `center`, padding:`1em`}}
+
+                    />
+                  <h4 style={{color:`#e2bb8f`}}>JOSÉ LUIS MARTÍNEZ-ALMEIDA</h4>
+                  <h5 style={{color:`#e6e0e0`}}>CONSEJERO</h5>
+                  {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p> */}
+                  <PopoverComp
+                    text="Alcalde de Madrid."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          
+            
             
             
             
             </div>
-            </div>
-            <p>
-            Es Licenciada en Ciencias Económicas y Empresariales, rama de Economía de la Empresa, por la Universidad Complutense de Madrid. Funcionaria en servicio activo de la Escala Técnica de Gestión de Organismos Autónomos y en excedencia del Cuerpo Técnico de Auditoría y Contabilidad, Executive Master in Public Administration EMPA. ESADE.    
-            </p>        
-            <p>
-            Ha trabajado como Subdirectora General de Administración Financiera y Oficialía Mayor en el Ministerio de Asuntos Económicos y Transformación Digital. Ha sido Secretaria General del Consejo Superior de Deportes y del Instituto Español de Oceanografía y Subdirectora General Adjunta de Administración Económica en la Secretaría General de la Dirección General de Tráfico.            
-            </p>
-            <p>
-            Miembro del Consejo de Administración del Centro para el Desarrollo Tecnológico Industrial E.P.E. (CDTI).
-            </p>
-            
-            
-            
-            
-            
-            
           </div>
         </div>
         

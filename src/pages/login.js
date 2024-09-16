@@ -45,7 +45,7 @@ const Login = () => {
             <div className="imagenAntigua">
                 <div className="fondoBlanco">
                     <h3>Acceso empleados</h3>
-                    <form action="/my-handling-form-page" method="post">
+                    <form action="/my-handling-form-page" method="post" style={{margin:`80px`}}>
                         <ul className="lista">
                             <li className="mail">
                                 <div className="icono">

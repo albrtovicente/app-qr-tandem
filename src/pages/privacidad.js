@@ -12,9 +12,6 @@ const Privacidad = () => {
         
          <h1 style={{textAlign: `center`}}>Política de privacidad</h1>  
         
-  
-          
-  
       </Layout>
       
     )

@@ -32,7 +32,7 @@ export default function Pipiver (){
          <>
          <Button aria-describedby={id} variant="contained" onClick={handleClick}>
                 <StaticImage className="logoheader"
-                    src="../images/acceso.png"
+                    src="../../images/acceso.png"
                     loading="eager"
                     width={80}
                     height={80}
@@ -80,7 +80,7 @@ export default function Pipiver (){
          
             <Button aria-describedby={id} variant="contained" onClick={handleClick}>
                 <StaticImage className="logoheader"
-                    src="../images/acceso.png"
+                    src="../../images/acceso.png"
                     loading="eager"
                     width={80}
                     height={80}

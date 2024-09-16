@@ -71,6 +71,7 @@ function TablaQr({ url }) {
             </tbody>
         </table>
         <button className='buttonAtras'><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
+        <br/><br/><br/><br/>
         </div>
         </Layout>	 
         </>

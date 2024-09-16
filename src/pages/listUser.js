@@ -89,9 +89,11 @@ function ListUser({ url }) {
             </tbody>
         </table>
         <button className='buttonAtras'><Link to="/CrearQr" style={{color: `white`, textDecoration: `none`}}>Atrás</Link></button>
+        {/* <Link to="/CrearQr" role='button' style={{color: `white`, textDecoration: `none`}}>Atrás</Link> */}
+        <br/><br/><br/><br/>
         </div>	 
         </Layout>
-        </>
+        </>    
     );
 }
 export default ListUser;

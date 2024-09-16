@@ -48,7 +48,7 @@ const Registro = () => {
 
     return (
       <Layout>
-      <div className="imgFondo">
+      <div className="imgFond">
 
       <div class="signupFrm">
         <div action="" class="form">
@@ -57,7 +57,7 @@ const Registro = () => {
                   <h1 class="title">Registrar</h1>
                 </div>
                 <div className="botonRegistro">
-                <Link to="/login">
+                <Link to="/login" style={{textDecoration:`none`}}>
                   <button className="button_active">Atrás</button>
                 </Link> 
                 </div>
@@ -87,17 +87,22 @@ const Registro = () => {
             <label htmlFor='email' class="label">Email</label>
           </div>
 
-          <div class="inputContainer">
-          <input
+          {/* <div class="inputContainer"> */}
+          {/* <select name="select" value={delegacion} onChange={hadleDelegacion} required>
+              <option value="Aranjuez">Aranjuez</option>
+              <option value="El_Escorial" >El Escorial</option>
+              <option value="Moncloa">Moncloa</option>
+          </select> */}
+          {/* <input
                 className="input"
                 type="text"
                 placeholder=""
                 id='delegacion'
                 value={delegacion}
                 onChange={hadleDelegacion}
-            />
-            <label htmlFor='delegacion' class="label">Delegacion</label>
-          </div>
+            /> */}
+            {/* <label htmlFor='delegacion' class="label">Delegacion</label>
+          </div> */}
 
           {/* <div class="inputContainer">
             <input type="text" class="input" placeholder=""/>

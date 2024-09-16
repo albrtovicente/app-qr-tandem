@@ -37,6 +37,7 @@ const UpdateUser = ({initialNombre, initialEmail, initialDelegacion}) => {
             <div>
             <h3 className="grupo1" style={{ fontSize: `34px`, textAlign: `center`}}>Actualizar Usuario</h3>
             <form action="/my-handling-form-page" method="post" className="formAcceso" >
+            
                 <ul className="lista">
                     
                     <li>
@@ -47,7 +48,7 @@ const UpdateUser = ({initialNombre, initialEmail, initialDelegacion}) => {
                     <li className="pass">
                         <div className="icono3">
                             <input
-                                type="text"
+                                type="opc"
                                 id='text'
                                 value={nombre}
                                 onChange={handleNombre}
@@ -57,14 +58,19 @@ const UpdateUser = ({initialNombre, initialEmail, initialDelegacion}) => {
                     </li>
                     <br></br><br></br>
                     <li>
-                    <div className="icono4" style={{width: `200px`, marginLeft: `80px`}}>
-                        <input
+                    {/* <div className="icono4" style={{width: `200px`, marginLeft: `80px`}}> */}
+                        <select name="select" value={delegacion} onChange={handleDelegacion} required>
+                            <option value="Aranjuez">Aranjuez</option>
+                            <option value="El_Escorial" >El Escorial</option>
+                            <option value="Moncloa">Moncloa</option>
+                        </select>
+                        {/* <input
                             placeholder="delegacion"
                             type="text"
                             value={delegacion}
                             onChange={handleDelegacion}
-                        />
-                    </div>
+                        /> */}
+                    {/* </div> */}
                     </li>
                     
                 </ul>
