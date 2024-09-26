@@ -6,19 +6,6 @@ import Layout from "../componentes/layout/layout"
 
 
 
-const Accesibilidad = () => {
-  
-    return (
-      <Layout>
-        
-         <h1 style={{textAlign: `center`}}>Accesibilidad</h1>  
-        
-  
-          
-  
-      </Layout>
-      
-    )
-  }
+const Accesibilidad = () => {return <div></div>}
   
   export default Accesibilidad
